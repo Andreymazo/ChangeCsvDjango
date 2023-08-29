@@ -1,0 +1,5 @@
+FIO, Organization, tel number 1,tel number 2
+Ivanov Ivan Ivanovich,Gazprom, 87653, 76543
+Frolov Frol Frolovich,Biblioteka, 9876, 7654
+Sergeev Sergei Sergeevich,Katok, 5432, 8765
+Abdulov Abdula Abdulovich,Svoi Traktor,  5432,  9843

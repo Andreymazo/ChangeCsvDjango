@@ -1,0 +1,54 @@
+{% load my_tags %}
+
+
+
+<div style="padding:40px;margin:40px;border:1px solid #ccc">
+    <h1>Django File Upload</h1>
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ form.as_p }}
+      
+      <button type="submit">Submit</button>
+      
+    </form><hr>
+    <body>
+        {{lst_context}}
+        {{documents}}
+       
+
+    </body>
+    
+    <ul>
+      <div>
+
+        {% for d in lst_context %}
+            {% for k,v in d.items %}
+            {{ v }}
+            {% endfor %}
+        {% endfor %}
+
+      </div>
+    </ul>
+    <body>
+      {{object_list}}
+      {{some_text}}
+    </body>
+
+      <div>
+        {% for d in lst_context %}
+          {{forloop.counter}}
+          {{d.forloop.counter}}
+          {% for j,v in d.items %} 
+          <div>
+            {{v}}
+
+            <a class="btn.btn-default" href="{% url 'change_csv:csv_model_create' %}" >Create</a>
+            <a class="btn.btn-default" href="{% url 'change_csv:csv_model_update' %}" >Update</a>
+            <a class="btn.btn-default" href="{% url 'change_csv:csv_model_delete' %}" >Delete</a>
+            
+          </div>
+          
+          {% endfor %}
+        {% endfor %}
+      </div>
+</div>

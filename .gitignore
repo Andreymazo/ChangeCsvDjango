@@ -1,0 +1,9 @@
+/.git
+/env/
+.env
+/media/
+__pycache__
+/static/
+*.csv
+*.xls
+
